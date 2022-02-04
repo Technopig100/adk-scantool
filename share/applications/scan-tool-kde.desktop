@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=selinux.svg
+Exec=scantool
+Categories=Utilities;
+OnlyShowIn=KDE;
+Name=OBD Scan Tool
+Comment=OBD Scan Tool
+GenericName=OBD Scan Tool
