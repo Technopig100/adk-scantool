@@ -63,18 +63,17 @@ release:
 	make RELEASE=1
 endif
 
-tarball: clean
-	ver=$(shell grep SCANTOOL_VERSION_STR version.h | cut -d'"' -f2) && \
-	mkdir -p scantool-$${ver} && \
-	git ls-tree -r master --name-only | grep -v ^debian/ | grep -v '^\.' | cpio -pdm scantool-$${ver} && \
-	tar jcf scantool-$${ver}.tar.bz2 scantool-$${ver} && \
-	rm -rf scantool-$${ver}
+#tarball: clean
+#	ver=$(shell grep SCANTOOL_VERSION_STR version.h | cut -d'"' -f2) && \
+#	mkdir -p scantool-$${ver} && \
+#	git ls-tree -r master --name-only | grep -v ^debian/ | grep -v '^\.' | cpio -pdm scantool-$${ver} && \
+#	tar jcf scantool-$${ver}.tar.bz2 scantool-$${ver} && \
+#	rm -rf scantool-$${ver}
 
 install: $(BIN) $(CODES)
 	install -D $(BIN) $(DESTDIR)/usr/bin/$(BIN)
 	install -D -m 0644 $(EXE).dat $(DESTDIR)/usr/share/$(EXE)/$(EXE).dat
 	install -D -m 0644 $(CODES) $(DESTDIR)/usr/share/$(EXE)/codes.dat
-	mkdir -p /usr/share/applications/
 	install /share/applications/scan-tool-kde.desktop $(DESTDIR)/usr/share/applications/
 
 clean:
