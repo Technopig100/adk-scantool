@@ -73,7 +73,7 @@ install: $(BIN) $(CODES)
 	install -D $(BIN) $(DESTDIR)/usr/bin/$(BIN)
 	install -D -m 0644 $(EXE).dat $(DESTDIR)/usr/share/$(EXE)/$(EXE).dat
 	install -D -m 0644 $(CODES) $(DESTDIR)/usr/share/$(EXE)/codes.dat
-	install -D -m 0644 $(EXE).desktop $(DESTDIR)/usr/share/$(EXE)/$(EXE).desktop
+	install -D -m 0644 $(EXE).desktop $(DESTDIR)/usr/share/applications/$(EXE)/$(EXE).desktop
 
 clean:
 	rm -f $(OBJ) $(BIN)
