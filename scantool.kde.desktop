@@ -5,8 +5,7 @@ Terminal=false
 Icon=selinux.svg
 Exec=scantool
 Categories=System;
-NotShowIn=KDE;
+ShowIn=KDE;
 Name=OBD Scan Tool
 Comment=OBD Scan Tool
 GenericName=OBD Scan Tool
-

@@ -74,6 +74,7 @@ install: $(BIN) $(CODES)
 	install -D -m 0644 $(EXE).dat $(DESTDIR)/usr/share/$(EXE)/$(EXE).dat
 	install -D -m 0644 $(CODES) $(DESTDIR)/usr/share/$(EXE)/codes.dat
 	install -D -m 0644 $(EXE).desktop $(DESTDIR)/usr/share/applications/$(EXE).desktop
+	install -D -m 0644 $(EXE).desktop $(DESTDIR)/usr/share/applications/$(EXE).kde.desktop
 
 clean:
 	rm -f $(OBJ) $(BIN)
